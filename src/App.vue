@@ -1,31 +1,43 @@
 <script setup>
+import { ref, computed } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import demo1 from './components/demo1.vue'
 import Parent from './components/Parent.vue';
 import ArrayDemo from './components/ArrayDemo.vue';
 import CarPark from './components/CarPark.vue';
+
+const routes = {
+  '/TheWelcome': TheWelcome,
+  '/CarPark': CarPark,
+  '/Parent': Parent,
+}
+const currentPath = ref(window.location.hash)
+window.addEventListener('hashchange', () => {
+  currentPath.value = window.location.hash
+})
+const currentView = computed(() => {
+  console.log(currentPath)
+  return routes[currentPath.value.slice(1) || '/'] || TheWelcome
+})
 </script>
 
 <template>
-  <el-container>
-    <el-main>
-      <CarPark></CarPark>
-    </el-main>
-  </el-container>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <header>
+    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <HelloWorld msg="You did it!" />
-    </div>
-  </header> -->
+    </div> -->
+  </header>
 
-
-  <!-- <TheWelcome /> -->
-  <!-- <demo1></demo1> -->
-  <!-- <Parent></Parent> -->
-
+  <main>
+    <!-- <TheWelcome /> -->
+    <a href="#/TheWelcome">TheWelcome</a>
+    <a href="#/CarPark">CarPark</a>
+    <a href="#/Parent">Parent</a>
+    <component :is="currentView" />
+  </main>
 </template>
 
 <style scoped>
