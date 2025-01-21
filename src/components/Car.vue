@@ -32,7 +32,7 @@ const props = defineProps({
     }
 })
 const cnumber = computed(() => {
-  return props.number >100 ? props.number : '0'+rops.number
+  return String(props.number).padStart(3, '0');
 })
 let carbackgroundColor = ref("#909090");
 function setCarColor() {

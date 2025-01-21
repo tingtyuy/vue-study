@@ -353,7 +353,7 @@ $parking-lot: '../assets/parking-lot.jpg';
 
 #r11 {
   left: 34.8rem;
-  top: 31.3rem;
+  top: 30.5rem;
   position: absolute;
   display: flex;
   height: 3.7rem;
