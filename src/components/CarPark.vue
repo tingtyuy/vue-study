@@ -103,7 +103,7 @@
         :isStop="n.isStop" numberPosition="right" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
-    <el-table id="rightTable" border :data="tableData" >
+    <el-table id="rightTable" border :data="tableData" header-row-class-name="rightTableHeader">
       <el-table-column prop="parkName" label="装备场" width="80" />
       <el-table-column prop="stopNum" label="在位" width="50" />
       <el-table-column prop="leaveNum" label="离位" width="50" />
@@ -440,6 +440,7 @@ $parking-lot: '../assets/parking-lot.jpg';
   top: 0.5rem;
   position: absolute;
 }
+
 .overlay {
   left: 0.9rem;
   top: 3.7rem;
@@ -534,7 +535,6 @@ $parking-lot: '../assets/parking-lot.jpg';
   /* 确保不影响覆盖层的交互 */
 }
 
-
 // 1830  
 // 840
 // 45.75%;
@@ -551,20 +551,23 @@ $parking-lot: '../assets/parking-lot.jpg';
   background-repeat: no-repeat;
 }
 
-// #rightTable{
-// 	.el-table__header-wrapper, .el-table__fixed-header-wrapper {
-// 		th {
-// 			word-break: break-word;
-// 			background-color: #1a1aa1 !important;
-// 			color: #515a6e;
-// 			height: 40px !important;
-// 			font-size: 13px;
-// 		}
-// 	}
-// 	.el-table__body-wrapper {
-// 		.el-button [class*="el-icon-"] + span {
-// 			margin-left: 1px;
-// 		}
-// 	}
-// }
+::v-deep .rightTableHeader th {
+  background-color: rgb(0 77 56);
+  color: rgb(237 235 222);
+}
+
+::v-deep #rightTable tbody tr :nth-of-type(2) {
+  color: rgb(121 192 120);
+  text-align: center;
+}
+
+::v-deep #rightTable tbody tr :nth-of-type(3) {
+  color: red;
+  text-align: center;
+}
+
+::v-deep #rightTable tbody tr :nth-of-type(4) {
+  color: rgb(171 177 185);
+  text-align: center;
+}
 </style>
