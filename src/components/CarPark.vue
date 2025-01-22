@@ -550,4 +550,21 @@ $parking-lot: '../assets/parking-lot.jpg';
   background-position: center;
   background-repeat: no-repeat;
 }
+
+// #rightTable{
+// 	.el-table__header-wrapper, .el-table__fixed-header-wrapper {
+// 		th {
+// 			word-break: break-word;
+// 			background-color: #1a1aa1 !important;
+// 			color: #515a6e;
+// 			height: 40px !important;
+// 			font-size: 13px;
+// 		}
+// 	}
+// 	.el-table__body-wrapper {
+// 		.el-button [class*="el-icon-"] + span {
+// 			margin-left: 1px;
+// 		}
+// 	}
+// }
 </style>
