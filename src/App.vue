@@ -6,11 +6,13 @@ import demo1 from './components/demo1.vue'
 import Parent from './components/Parent.vue';
 import ArrayDemo from './components/ArrayDemo.vue';
 import CarPark from './components/CarPark.vue';
+import Statistic from './components/Statistic/Statistic.vue';
 
 const routes = {
-  '/TheWelcome': TheWelcome,
+  // '/TheWelcome': TheWelcome,
   '/CarPark': CarPark,
-  '/Parent': Parent,
+  // '/Parent': Parent,
+  '/Statistic': Statistic,
 }
 const currentPath = ref(window.location.hash)
 window.addEventListener('hashchange', () => {
@@ -33,9 +35,9 @@ const currentView = computed(() => {
 
   <main>
     <!-- <TheWelcome /> -->
-    <a href="#/TheWelcome">TheWelcome</a>
+    <!-- <a href="#/TheWelcome">TheWelcome</a> -->
     <a href="#/CarPark">CarPark</a>
-    <a href="#/Parent">Parent</a>
+    <a href="#/Statistic">Statistic</a>
     <component :is="currentView" />
   </main>
 </template>
