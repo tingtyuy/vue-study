@@ -25,48 +25,15 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <header>
-    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
-
-    <!-- <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div> -->
-  </header>
-
-  <main>
-    <!-- <TheWelcome /> -->
-    <!-- <a href="#/TheWelcome">TheWelcome</a> -->
-    <a href="#/CarPark">CarPark</a>
-    <a href="#/Statistic">Statistic</a>
-    <component :is="currentView" />
-  </main>
+  <el-container style="height: 100%;   width: 1280px;  border: 1px solid red;">
+    <el-header>
+      <a href="#/CarPark">CarPark</a>
+      <a href="#/Statistic">Statistic</a>
+    </el-header>
+    <el-main>
+      <component :is="currentView" />
+    </el-main>
+  </el-container>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<style scoped></style>
