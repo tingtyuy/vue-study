@@ -1,11 +1,26 @@
 <template>
-    <div :class="headerDirection" :style="{ backgroundColor: carbackgroundColor }">
-        <el-text :class="numberPosition" size="large"> {{ cnumber }}</el-text>
 
-    </div>
+    <el-popover placement="right" width="10rem" trigger="click">
+        <template #reference>
+            <div :class="headerDirection" :style="{ backgroundColor: carbackgroundColor }">
+                <el-text :class="numberPosition" size="large"> {{ cnumber }}</el-text>
+            </div>
+        </template>
+        <el-descriptions title="车辆信息" :column="1" size="small">
+            <el-descriptions-item label="位置">{{ cnumber }}</el-descriptions-item>
+            <el-descriptions-item label="车型">{{ carClass }}</el-descriptions-item>
+            <el-descriptions-item label="车号">{{ carNumber }}</el-descriptions-item>
+            <el-descriptions-item label="状态">{{ stopName }}</el-descriptions-item>
+            <el-descriptions-item label="所属分队">{{ from }}</el-descriptions-item>
+            <el-descriptions-item label="责任人">{{ masterName }}</el-descriptions-item>
+
+        </el-descriptions>
+    </el-popover>
+
+
 </template>
 <script setup>
-import { ref,computed } from 'vue';
+import { ref, computed } from 'vue';
 const props = defineProps({
     headerDirection:
     {
@@ -29,10 +44,36 @@ const props = defineProps({
     {
         type: Boolean,
         default: false
-    }
+    },
+
+    carNumber:
+    {
+        type: String,
+        default: false
+    },
+    carClass:
+    {
+        type: String,
+        default: false
+    },
+    stopName:
+    {
+        type: String,
+        default: false
+    },
+    from:
+    {
+        type: String,
+        default: false
+    },
+    masterName:
+    {
+        type: String,
+        default: false
+    },
 })
 const cnumber = computed(() => {
-  return String(props.number).padStart(3, '0');
+    return String(props.number).padStart(3, '0');
 })
 let carbackgroundColor = ref("#909090");
 function setCarColor() {
