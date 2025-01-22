@@ -25,7 +25,7 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <el-container style="height: 100%;   width: 1280px;  border: 1px solid red;">
+  <el-container style="width: 1280px;  border: 1px solid red;">
     <el-header>
       <a href="#/CarPark">CarPark</a>
       <a href="#/Statistic">Statistic</a>
