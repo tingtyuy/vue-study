@@ -1,12 +1,12 @@
 <template>
 
-    <el-popover placement="right" width="10rem" trigger="click">
+    <el-popover placement="right" width="16rem" trigger="click">
         <template #reference>
             <div :class="headerDirection" :style="{ backgroundColor: carbackgroundColor }">
                 <el-text :class="numberPosition" size="large"> {{ cnumber }}</el-text>
             </div>
         </template>
-        <el-descriptions title="车辆信息" :column="1" size="small">
+        <el-descriptions title="车辆信息" :column="2" size="small">
             <el-descriptions-item label="位置">{{ cnumber }}</el-descriptions-item>
             <el-descriptions-item label="车型">{{ carClass }}</el-descriptions-item>
             <el-descriptions-item label="车号">{{ carNumber }}</el-descriptions-item>
