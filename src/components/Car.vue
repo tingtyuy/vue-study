@@ -7,12 +7,12 @@
             </div>
         </template>
         <el-descriptions title="车辆信息" :column="2" size="small">
-            <el-descriptions-item label="位置">{{ cnumber }}</el-descriptions-item>
-            <el-descriptions-item label="车型">{{ carClass }}</el-descriptions-item>
-            <el-descriptions-item label="车号">{{ carNumber }}</el-descriptions-item>
-            <el-descriptions-item label="状态">{{ stopName }}</el-descriptions-item>
-            <el-descriptions-item label="所属分队">{{ from }}</el-descriptions-item>
-            <el-descriptions-item label="责任人">{{ masterName }}</el-descriptions-item>
+            <el-descriptions-item label="位置:">{{ cnumber }}</el-descriptions-item>
+            <el-descriptions-item label="车型:">{{ carClass }}</el-descriptions-item>
+            <el-descriptions-item label="车号:">{{ carNumber }}</el-descriptions-item>
+            <el-descriptions-item label="状态:">{{ stopName }}</el-descriptions-item>
+            <el-descriptions-item label="所属分队:">{{ from }}</el-descriptions-item>
+            <el-descriptions-item label="责任人:">{{ masterName }}</el-descriptions-item>
 
         </el-descriptions>
     </el-popover>
@@ -40,7 +40,7 @@ const props = defineProps({
         default: -1
     }
     ,
-    hasCar:
+    isStop:
     {
         type: Boolean,
         default: false
@@ -77,7 +77,7 @@ const cnumber = computed(() => {
 })
 let carbackgroundColor = ref("#909090");
 function setCarColor() {
-    if (props.hasCar) {
+    if (props.isStop) {
         carbackgroundColor.value = "#49c298";
     }
 }

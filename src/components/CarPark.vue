@@ -5,7 +5,7 @@
     <el-text id="labelright" size="large">地下车库</el-text>
     <!-- left -->
     <div id="carparkleft">
-      <Car :number="n.number" v-for=" n in l1" :key="n" number-position="right" :has-car="n.isStop"
+      <Car :number="n.number" v-for=" n in l1" :key="n" number-position="right" :isStop="n.isStop"
         :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from" :masterName="n.masterName"
         :carClass="n.carClass"></Car>
     </div>
@@ -13,22 +13,22 @@
     <div class="overlay2"></div>
     <div class="overlay3"></div>
     <div id="carparkcenter">
-      <Car :number="n.number" v-for=" n in l2" :key="n" number-position="left" :has-car="n.isStop"
+      <Car :number="n.number" v-for=" n in l2" :key="n" number-position="left" :isStop="n.isStop"
         :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from" :masterName="n.masterName"
         :carClass="n.carClass"></Car>
     </div>
     <div id="carparkcenter2">
-      <Car :number="n.number" v-for=" n in l3" :key="n" number-position="right" :has-car="n.isStop"
+      <Car :number="n.number" v-for=" n in l3" :key="n" number-position="right" :isStop="n.isStop"
         :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from" :masterName="n.masterName"
         :carClass="n.carClass"></Car>
     </div>
     <div id="carparkright">
-      <Car :number="n.number" v-for=" n in l4" :key="n" number-position="left" :has-car="n.isStop"
+      <Car :number="n.number" v-for=" n in l4" :key="n" number-position="left" :isStop="n.isStop"
         :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from" :masterName="n.masterName"
         :carClass="n.carClass"></Car>
     </div>
     <div id="carparkright2">
-      <Car :number="n.number" v-for=" n in l5" :key="n" number-position="right" :has-car="n.isStop"
+      <Car :number="n.number" v-for=" n in l5" :key="n" number-position="right" :isStop="n.isStop"
         :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from" :masterName="n.masterName"
         :carClass="n.carClass"></Car>
     </div>
@@ -36,74 +36,74 @@
 
     <div id="r1">
       <Car :number="n.number" v-for=" n in r1" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rcenter" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rcenter" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r2">
       <Car :number="n.number" v-for=" n in r2" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r3">
       <Car :number="n.number" v-for=" n in r3" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r4">
       <Car :number="n.number" v-for=" n in r4" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r5">
       <Car :number="n.number" v-for=" n in r5" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r6">
       <Car :number="n.number" v-for=" n in r6" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r7">
       <Car :number="n.number" v-for=" n in r7" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r8">
       <Car :number="n.number" v-for=" n in r8" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
 
     <div id="r9">
       <Car :number="n.number" v-for=" n in r9" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carClass="n.carClass" :carNumber="n.carNumber"
+        :isStop="n.isStop" numberPosition="rright" :carClass="n.carClass" :carNumber="n.carNumber"
         :stopName="n.stopName" :from="n.from" :masterName="n.masterName"></Car>
     </div>
 
     <div id="r10">
       <Car :number="n.number" v-for=" n in r10" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
     <div id="r11">
       <Car :number="n.number" v-for=" n in r11" :key="n" number-position="right" headerDirection="vertical"
-        :has-car="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="rright" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
     <div id="r12">
       <Car :number="n.number" v-for=" n in r12" :key="n" number-position="right" headerDirection="horizontal"
-        :has-car="n.isStop" numberPosition="right" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
+        :isStop="n.isStop" numberPosition="right" :carNumber="n.carNumber" :stopName="n.stopName" :from="n.from"
         :masterName="n.masterName" :carClass="n.carClass"></Car>
     </div>
-    <el-table id="rightTable" border :data="tableData"  header-row-class-name="rightTableHeader">
+    <el-table id="rightTable" border :data="tableData" >
       <el-table-column prop="parkName" label="装备场" width="80" />
       <el-table-column prop="stopNum" label="在位" width="50" />
       <el-table-column prop="leaveNum" label="离位" width="50" />
@@ -158,7 +158,13 @@ const rdata = Array.from({ length: rendNumber - rstartNumber + 1 }, (_, index) =
   number: rstartNumber + index,
   isStop: false,
   isLeave: false,
-  isEmpty: true
+  isEmpty: true,
+  parkName: "膜结构车棚",
+  carClass: "轿车",
+  carNumber: "XL12062",
+  stopName: "在位",
+  from: "教练勤务连",
+  masterName: "熊廷建",
 }));
 
 let l1 = ref([]);
@@ -216,6 +222,7 @@ function init() {
   allotData();
   makeData();
 }
+
 init();
 </script>
 
@@ -427,18 +434,12 @@ $parking-lot: '../assets/parking-lot.jpg';
   z-index: 2;
 }
 
-#rightTable{
+#rightTable {
   width: 20rem;
   left: 59.7rem;
-  // top: 7.6rem;
+  top: 0.5rem;
   position: absolute;
 }
-.rightTableHeader
-{
-
-  background-color: #3bb1b1;
-}
-
 .overlay {
   left: 0.9rem;
   top: 3.7rem;
@@ -469,6 +470,7 @@ $parking-lot: '../assets/parking-lot.jpg';
   pointer-events: none;
   /* 确保不影响覆盖层的交互 */
 }
+
 .overlay2 {
   left: 10.25rem;
   top: 3.7rem;
