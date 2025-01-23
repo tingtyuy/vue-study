@@ -1,14 +1,43 @@
 <template>
-    <Chat :chat-id="chatid" :chat-title="chattitle"></Chat>
+    <!-- <Tab :tabPanes="tabPanes" v-model="activeTab" @tab-change="handleTabChange">
+        <template v-slot:tab-content-1="{ pane }">
+            <Chat :chat-id="chatid" :chat-title="chattitle"></Chat>
+        </template>
+</Tab> -->
+    <!-- <TabButton tab-Buttion-Click="tabButtionClick"> </TabButton> -->
+
+    <Chat :chat-id="chatid" :chat-title="chattitle">
+        <TabButton tab-Buttion-Click="tabButtionClick"> </TabButton>
+    </Chat>
+
+
 </template>
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import * as echarts from 'echarts';
 import jsonData from './myEChart.json'
 import Chat from './Chat.vue';
+// import Tab from './Tab.vue';
+import TabButton from './TabButton.vue';
 const chatid = 'Chart03';
 const chattitle = 'Chart03 统计';
 echarts.registerTheme('customed', jsonData)
+
+const tabButtionClick = () => {
+
+    console.log("parent tabButtionClick");
+}
+
+// const activeTab = '1'
+// const tabPanes = [
+//     { label: '年', name: '1' },
+//     { label: '月', name: '2' },
+//     { label: '周', name: '3' },
+//     { label: '日', name: '4' }
+// ]
+// const handleTabChange = (tabName) => {
+//     console.log('当前激活的标签页是：', tabName);
+// }
 function init() {
     const Chart = document.getElementById(chatid);
     const mainInstance = echarts.init(Chart, 'customed');

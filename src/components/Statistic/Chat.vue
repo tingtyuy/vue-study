@@ -1,15 +1,26 @@
 <template>
 
     <div class="myChart">
-        <div class="title">
-            <el-text style="color: rgb(3 254 254); margin-left: 0.5rem;">{{ chatTitle }}</el-text>
-        </div>
+        <el-row>
+            <el-col :span="12">
+                <div class="title">
+                    <el-text style="color: rgb(3 254 254); margin-left: 0.5rem;">{{ chatTitle }}</el-text>
+                </div>
+            </el-col>
+            <el-col :span="12">
+                <el-row justify="end">
+                    <slot></slot>
+                    <!-- <TabButton tab-Buttion-Click="tabButtionClick"> </TabButton> -->
+                </el-row>
+
+            </el-col>
+        </el-row>
         <div :id="chatId" style=" height: 13rem;"></div>
     </div>
 
 </template>
 <script setup>
-
+import TabButton from './TabButton.vue';
 const props = defineProps({
     chatId: {
         type: String,
@@ -32,6 +43,6 @@ const props = defineProps({
 .title {
     min-height: 1.5rem;
     max-width: 90%;
-    background: -webkit-linear-gradient(left, rgb(3 136 138), rgb(3 136 138), rgb(0 29 30)) no-repeat;
+    background: -webkit-linear-gradient(left, rgb(3 136 138), rgb(6, 87, 88), rgb(0 29 30)) no-repeat;
 }
 </style>
