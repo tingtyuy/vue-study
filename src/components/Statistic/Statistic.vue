@@ -48,6 +48,16 @@
                     </el-row>
                 </el-col>
                 <el-col :span="12">
+                    <el-row>
+                        <el-col :span="24">
+                            <DutytInfo></DutytInfo>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col :span="24">
+                            <DutytInfo></DutytInfo>
+                        </el-col>
+                    </el-row>
                 </el-col>
                 <el-col :span="6">
                     <el-row>
@@ -75,7 +85,8 @@ import Chart03 from './Chart03.vue';
 import Chart04 from './Chart04.vue';
 import Chart05 from './Chart05.vue';
 import Chart06 from './Chart06.vue';
-import logo from '@/assets/logo2.png'
+import logo from '@/assets/logo2.png';
+import DutytInfo from './DutyInfo.vue';
 
 
 // 创建响应式变量
