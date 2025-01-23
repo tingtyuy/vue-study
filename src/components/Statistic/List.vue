@@ -1,5 +1,6 @@
 <template>
     <div class="list">
+        <span style="color: #03a0a1; font-size: 0.9rem;">信息公告</span>
         <el-table id="rightTable" :data="tableData" style="width: 100%" :show-header=false
             header-row-class-name="rightTableHeader">
             <el-table-column prop="carClass" label="carClass" width="100" />
@@ -53,7 +54,11 @@ const tableData = [
 }
 
 ::v-deep .el-table .el-table__body-wrapper tbody tr td,
-.el-table .el-table__body-wrapper tbody tr th {
+.el-table .el-table__body-wrapper tbody tr th,
+.el-table,
+.el-table .el-table__body-wrapper tbody tr,
+.el-table .el-table__body-wrapper tbody,
+.el-table .el-table__body-wrapper {
     border-bottom: 1px solid #03a0a1 !important;
 }
 </style>
