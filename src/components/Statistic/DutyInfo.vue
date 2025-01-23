@@ -2,7 +2,7 @@
     <div class="dutyInfo">
         <el-row>
             <el-col :span="18">
-                <el-descriptions title="值班信息" :column="2" size="small" label-width="10">
+                <el-descriptions title="值班信息" :column="2" size="small" >
                     <el-descriptions-item align="center" label="连队值班干部:">{{ infoData.groupUser
                         }}</el-descriptions-item>
                     <el-descriptions-item align="center" label="电话:">{{ infoData.groupPhone
@@ -44,7 +44,7 @@ const infoData = ref({
 
     border: 1.5px solid #03a0a1;
     padding: 1.2rem;
-    width: 100%;
+    width: 98%;
     height: 15rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;

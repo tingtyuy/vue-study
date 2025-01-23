@@ -55,7 +55,7 @@
                     </el-row>
                     <el-row>
                         <el-col :span="24">
-                            <DutytInfo></DutytInfo>
+                            <List></List>
                         </el-col>
                     </el-row>
                 </el-col>
@@ -87,6 +87,7 @@ import Chart05 from './Chart05.vue';
 import Chart06 from './Chart06.vue';
 import logo from '@/assets/logo2.png';
 import DutytInfo from './DutyInfo.vue';
+import List from './List.vue';
 
 
 // 创建响应式变量
