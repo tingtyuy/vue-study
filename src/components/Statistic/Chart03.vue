@@ -20,7 +20,7 @@ import Chat from './Chat.vue';
 // import Tab from './Tab.vue';
 import TabButton from './TabButton.vue';
 const chatid = 'Chart03';
-const chattitle = 'Chart03 统计';
+const chattitle = '技术状况统计';
 echarts.registerTheme('customed', jsonData)
 
 const tabButtionClick = (param) => {

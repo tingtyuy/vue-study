@@ -1,11 +1,15 @@
 <template>
-    <Chat :chat-id="chatid" :chat-title="chattitle"></Chat>
+     <Chat :chat-id="chatid" :chat-title="chattitle">
+        <TabButton @click="tabButtionClick"> </TabButton>
+    </Chat>
+
 </template>
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import * as echarts from 'echarts';
 import jsonData from './myEChart.json'
 import Chat from './Chat.vue';
+import TabButton from './TabButton.vue';
 echarts.registerTheme('customed', jsonData)
 const chatid = 'Chart02';
 const chattitle = '单装统计';
@@ -42,21 +46,22 @@ function init() {
                 data: [320, 332, 301, 334, 390]
             },
             {
-                name: '车型封存数量r',
-                type: 'bar',
-                emphasis: {
-                    focus: 'series'
-                },
-                data: [220, 182, 191, 234, 290]
-            },
-            {
-                name: '车型维修保养的数量',
+                name: '已出车任务数量',
                 type: 'bar',
                 emphasis: {
                     focus: 'series'
                 },
                 data: [220, 182, 191, 234, 290]
             }
+            // ,
+            // {
+            //     name: '车型维修保养的数量',
+            //     type: 'bar',
+            //     emphasis: {
+            //         focus: 'series'
+            //     },
+            //     data: [220, 182, 191, 234, 290]
+            // }
 
         ]
     };
