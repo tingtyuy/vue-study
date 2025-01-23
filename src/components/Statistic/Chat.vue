@@ -1,5 +1,5 @@
 <template>
-
+    <!-- <dv-border-box-5> -->
     <div class="myChart">
         <el-row>
             <el-col :span="12">
@@ -17,9 +17,12 @@
         </el-row>
         <div :id="chatId" style="height: 14rem;"></div>
     </div>
+    <!-- </dv-border-box-5> -->
+
 
 </template>
 <script setup>
+// import { borderBox5 } from '@jiaminghi/data-view'
 // import TabButton from './TabButton.vue';
 const props = defineProps({
     chatId: {
@@ -35,9 +38,10 @@ const props = defineProps({
 <style scoped lang="scss">
 .myChart {
 
-    border: 2px solid #03a0a1;
+    border: 1px solid #03a0a1;
     padding: 1.2rem;
     width: 100%;
+    margin-bottom: 1.2rem;
 }
 
 .title {

@@ -41,7 +41,7 @@ const tableData = [
     border: 1.5px solid #03a0a1;
     padding: 1.2rem;
     width: 98%;
-    height: 39.8rem;
+    height: 41.8rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 

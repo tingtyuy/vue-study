@@ -18,7 +18,7 @@
                 </el-descriptions></el-col>
             <el-col :span="6">
                 <el-row justify="end">
-                    <el-button type="primary" link style="color: #03a0a1;;">设置</el-button>
+                    <el-button type="primary" link style="color: #03a0a1;"  @click="dialogTableVisible = true">设置</el-button>
                 </el-row>
 
             </el-col>
