@@ -7,7 +7,7 @@
     <!-- <TabButton tab-Buttion-Click="tabButtionClick"> </TabButton> -->
 
     <Chat :chat-id="chatid" :chat-title="chattitle">
-        <TabButton tab-Buttion-Click="tabButtionClick"> </TabButton>
+        <TabButton @click="tabButtionClick"> </TabButton>
     </Chat>
 
 
@@ -23,9 +23,9 @@ const chatid = 'Chart03';
 const chattitle = 'Chart03 统计';
 echarts.registerTheme('customed', jsonData)
 
-const tabButtionClick = () => {
+const tabButtionClick = (param) => {
 
-    console.log("parent tabButtionClick");
+    console.log("parent tabButtionClick",param);
 }
 
 // const activeTab = '1'

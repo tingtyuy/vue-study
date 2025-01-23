@@ -20,10 +20,11 @@ const props = defineProps({
     }
 })
 const activeButionStatus = ref(1)
-defineEmits("tabButtionClick");
+const emit = defineEmits(['click']);
 const tabButtionClick = (param) => {
     console.log("child tabButtionClick", param);
     activeButionStatus.value = param;
+    emit("click",param);
 }
 </script>
 <style lang="scss" scoped>
