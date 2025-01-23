@@ -45,9 +45,9 @@ function init() {
     const option = {
         dataset: {
             source: [
-                ['总数', 'car'],
+                ['sum', 'car'],
                 [100, '大巴车'],
-                [1000, '轿车'],
+                [200, '轿车'],
                 [100, '卡车'],
                 [200, '商务车'],
                 [200, '皮卡'],
@@ -62,7 +62,7 @@ function init() {
         },
         xAxis: [
             {
-                name:'总数'
+                name:''
                 // type: 'value',
                 // axisTick: { show: false },
                 // data: ['大巴车', '轿车', '卡车', '商务车', '皮卡']
@@ -83,7 +83,7 @@ function init() {
                 },
                 // data: [320, 332, 301, 334, 390],
                 encode: {
-                    x:'总数',
+                    x:'sum',
                     y: 'car'
                 }
             }
