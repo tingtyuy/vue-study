@@ -1,13 +1,13 @@
 <template>
     <div class="list">
         <span style="color: #03a0a1; font-size: 0.9rem;">信息公告</span>
-        <el-table id="rightTable" :data="tableData" style="width: 100%" :show-header=false
+        <el-table id="rightTable" :data="tableData" style="width: 99%" :show-header=false
             header-row-class-name="rightTableHeader">
-            <el-table-column prop="carClass" label="carClass" width="100" />
-            <el-table-column prop="carnum" label="carnum" width="100" />
-            <el-table-column prop="carUser" label="carUser" width="100" />
-            <el-table-column prop="item" label="item" width="110" />
-            <el-table-column prop="item2" label="item2" width="110" />
+            <el-table-column prop="carClass" label="carClass" width="50" />
+            <el-table-column prop="carnum" label="carnum" width="70" />
+            <el-table-column prop="carUser" label="carUser" width="70" />
+            <el-table-column prop="item" label="item" width="150" />
+            <el-table-column prop="item2" label="item2" width="150" />
             <el-table-column prop="date" label="date" width="200" />
 
         </el-table>
