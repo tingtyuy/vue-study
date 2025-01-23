@@ -1,18 +1,59 @@
 <template>
-    <Chat :chat-id="chatid" :chat-title="chattitle"></Chat>
+    <!-- <Tab :tabPanes="tabPanes" v-model="activeTab" @tab-change="handleTabChange">
+        <template v-slot:tab-content-1="{ pane }">
+            <Chat :chat-id="chatid" :chat-title="chattitle"></Chat>
+        </template>
+</Tab> -->
+    <!-- <TabButton tab-Buttion-Click="tabButtionClick"> </TabButton> -->
+
+    <Chat :chat-id="chatid" :chat-title="chattitle">
+        <TabButton @click="tabButtionClick"> </TabButton>
+    </Chat>
+
+
 </template>
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import * as echarts from 'echarts';
 import jsonData from './myEChart.json'
 import Chat from './Chat.vue';
+// import Tab from './Tab.vue';
+import TabButton from './TabButton.vue';
 const chatid = 'Chart04';
-const chattitle = 'Chart04 统计';
+const chattitle = '车型统计';
 echarts.registerTheme('customed', jsonData)
+
+const tabButtionClick = (param) => {
+
+    console.log("parent tabButtionClick", param);
+}
+
+// const activeTab = '1'
+// const tabPanes = [
+//     { label: '年', name: '1' },
+//     { label: '月', name: '2' },
+//     { label: '周', name: '3' },
+//     { label: '日', name: '4' }
+// ]
+// const handleTabChange = (tabName) => {
+//     console.log('当前激活的标签页是：', tabName);
+// }
 function init() {
     const Chart = document.getElementById(chatid);
-    const mainInstance = echarts.init(Chart, 'customed');
+    
+    const mainInstance = echarts.init(Chart, 'customed',{ });
     const option = {
+        dataset: {
+            source: [
+                ['总数', 'car'],
+                [100, '大巴车'],
+                [1000, '轿车'],
+                [100, '卡车'],
+                [200, '商务车'],
+                [200, '皮卡'],
+
+            ]
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -21,14 +62,15 @@ function init() {
         },
         xAxis: [
             {
-                type: 'category',
-                axisTick: { show: false },
-                data: ['大巴车', '轿车', '卡车', '商务车', '皮卡']
+                name:'总数'
+                // type: 'value',
+                // axisTick: { show: false },
+                // data: ['大巴车', '轿车', '卡车', '商务车', '皮卡']
             }
         ],
         yAxis: [
             {
-                type: 'value'
+                type: 'category'
             }
         ],
         series: [
@@ -39,23 +81,11 @@ function init() {
                 emphasis: {
                     focus: 'series'
                 },
-                data: [320, 332, 301, 334, 390]
-            },
-            {
-                name: '车型封存数量r',
-                type: 'bar',
-                emphasis: {
-                    focus: 'series'
-                },
-                data: [220, 182, 191, 234, 290]
-            },
-            {
-                name: '车型维修保养的数量',
-                type: 'bar',
-                emphasis: {
-                    focus: 'series'
-                },
-                data: [220, 182, 191, 234, 290]
+                // data: [320, 332, 301, 334, 390],
+                encode: {
+                    x:'总数',
+                    y: 'car'
+                }
             }
 
         ]
@@ -72,16 +102,5 @@ onMounted(() => {
 });
 </script>
 <style scoped lang="scss">
-.myChart {
 
-    border: 2px solid #03a0a1;
-    padding: 1.2rem;
-    width: 20rem;
-}
-
-.title {
-    min-height: 1.5rem;
-    max-width: 12rem;
-    background: -webkit-linear-gradient(left, rgb(3 136 138), rgb(3 136 138), rgb(0 29 30)) no-repeat;
-}
 </style>

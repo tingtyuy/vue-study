@@ -34,7 +34,7 @@
                 <span style="letter-spacing: 5px;">树军中良好形象</span>
             </el-row>
             <el-row>
-                <el-col :span="6">
+                <el-col :span="7">
                     <el-row>
                         <el-col :span="24">
                             <Chart01></Chart01>
@@ -47,9 +47,9 @@
                         </el-col>
                     </el-row>
                 </el-col>
-                <el-col :span="12">
+                <el-col :span="10">
                 </el-col>
-                <el-col :span="6">
+                <el-col :span="7">
                     <el-row>
                         <el-col :span="24">
                             <Chart04></Chart04>

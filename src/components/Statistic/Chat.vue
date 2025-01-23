@@ -15,7 +15,7 @@
 
             </el-col>
         </el-row>
-        <div :id="chatId" style=" height: 13rem;"></div>
+        <div :id="chatId" style="height: 14rem;"></div>
     </div>
 
 </template>
@@ -42,7 +42,7 @@ const props = defineProps({
 
 .title {
     min-height: 1.5rem;
-    max-width: 90%;
+    max-width: 95%;
     background: -webkit-linear-gradient(left, rgb(3 136 138), rgb(6, 87, 88), rgb(0 29 30)) no-repeat;
 }
 </style>

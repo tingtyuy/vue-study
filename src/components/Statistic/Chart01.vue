@@ -24,7 +24,7 @@ function init() {
             formatter: '{{b} {c})'
         },
         toolbox: {
-            show: true,
+            show: false,
             feature: {
                 mark: { show: true },
                 dataView: { show: true, readOnly: false },
@@ -62,16 +62,5 @@ onMounted(() => {
 });
 </script>
 <style scoped lang="scss">
-.myChart
-{
 
-    border: 2px solid #03a0a1;
-    padding: 1.2rem;
-    width: 20rem;
-}
-.title {
-    min-height: 1.5rem;
-    max-width: 12rem;
-    background: -webkit-linear-gradient(left, rgb(3 136 138), rgb(3 136 138), rgb(0 29 30)) no-repeat;
-}
 </style>

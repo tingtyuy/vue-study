@@ -13,6 +13,10 @@ import TabButton from './TabButton.vue';
 echarts.registerTheme('customed', jsonData)
 const chatid = 'Chart02';
 const chattitle = '单装统计';
+const tabButtionClick = (param) => {
+
+console.log("parent tabButtionClick",param);
+}
 function init() {
     const Chart = document.getElementById(chatid);
     const mainInstance = echarts.init(Chart, 'customed');
@@ -77,16 +81,5 @@ onMounted(() => {
 });
 </script>
 <style scoped lang="scss">
-.myChart {
 
-    border: 2px solid #03a0a1;
-    padding: 1.2rem;
-    width: 20rem;
-}
-
-.title {
-    min-height: 1.5rem;
-    max-width: 12rem;
-    background: -webkit-linear-gradient(left, rgb(3 136 138), rgb(3 136 138), rgb(0 29 30)) no-repeat;
-}
 </style>
