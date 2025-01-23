@@ -1,5 +1,5 @@
 <template>
-    <el-container>
+    <el-container id="chatContainer">
         <el-header class="header">
             <el-row style="margin-top: 1.5rem;">
                 <el-col :span="6">
@@ -34,27 +34,31 @@
                 <span style="letter-spacing: 5px;">树军中良好形象</span>
             </el-row>
             <el-row>
-                <el-col :span="24">
+                <el-col :span="6">
                     <el-row>
                         <el-col :span="24">
                             <Chart01></Chart01>
-
                         </el-col>
                         <el-col :span="24">
+                            <Chart02></Chart02>
                         </el-col>
                         <el-col :span="24">
+                            <Chart03></Chart03>
                         </el-col>
                     </el-row>
                 </el-col>
-                <el-col :span="24">
+                <el-col :span="12">
                 </el-col>
-                <el-col :span="24">
+                <el-col :span="6">
                     <el-row>
                         <el-col :span="24">
+                            <Chart04></Chart04>
                         </el-col>
                         <el-col :span="24">
+                            <Chart05></Chart05>
                         </el-col>
                         <el-col :span="24">
+                            <Chart06></Chart06>
                         </el-col>
                     </el-row>
                 </el-col>
@@ -66,6 +70,11 @@
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue';
 import { Operation } from '@element-plus/icons-vue'
 import Chart01 from './Chart01.vue';
+import Chart02 from './Chart02.vue';
+import Chart03 from './Chart03.vue';
+import Chart04 from './Chart04.vue';
+import Chart05 from './Chart05.vue';
+import Chart06 from './Chart06.vue';
 import logo from '@/assets/logo2.png'
 
 
@@ -85,8 +94,24 @@ const updateTime = () => {
     dayOfWeek.value = daysOfWeek[now.getDay()];
 };
 
+const allGreen = () => {
+
+    const elem = document.documentElement; // 通常使用 document.documentElement 或某个特定的元素
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen().catch(err => {
+            console.error('Error attempting to enable full-screen mode:', err);
+        });
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}
 // 在组件挂载时初始化时间和日期，并设置定时器
 onMounted(() => {
+    // allGreen();
     updateTime();
     const timer = setInterval(updateTime, 1000); // 每秒更新一次
 
