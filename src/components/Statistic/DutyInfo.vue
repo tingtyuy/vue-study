@@ -58,10 +58,14 @@
             </div>
         </template>
     </el-dialog>
-    <div class="dutyInfo">
+    <dv-border-box9 class="dutyInfo">
+        <!-- <div class="dutyInfo"> -->
         <el-row>
-            <el-col :span="18">
-                <el-descriptions title="值班信息" :column="2" size="small">
+            <el-col :span="17">
+                <el-descriptions :column="2" size="small">
+                    <template #title>
+                        <span style="color: #03a0a1; font-size: 1rem;">值班信息</span>
+                    </template>
                     <el-descriptions-item align="right" label="连队值班干部:">{{ infoData.groupUser
                         }}</el-descriptions-item>
                     <el-descriptions-item align="right" label="电话:">{{ infoData.groupPhone
@@ -75,8 +79,8 @@
                     <el-descriptions-item align="right" label="电话:">{{ infoData.schedulePhone
                         }}</el-descriptions-item>
                 </el-descriptions></el-col>
-            <el-col :span="6">
-                <el-row justify="end">
+            <el-col :span="7">
+                <el-row justify="center">
                     <el-button type="primary" link style="color: #03a0a1;"
                         @click="SetDutyInfoDialog = true">设置</el-button>
                 </el-row>
@@ -84,7 +88,9 @@
             </el-col>
 
         </el-row>
-    </div>
+        <!-- </div> -->
+    </dv-border-box9>
+
 </template>
 <script setup>
 import { ref, reactive } from 'vue';
@@ -109,12 +115,12 @@ const infoData = ref({
 <style scoped lang="scss">
 .dutyInfo {
 
-    border: 1.5px solid #03a0a1;
-    padding: 1.2rem;
-    width: 98%;
+    // border: 1.5px solid #03a0a1;
+    padding: 3.2rem;
+    width: 100%;
     height: 15rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    // margin-left: 1.5rem;
+    // margin-right: 1.5rem;
 
 }
 

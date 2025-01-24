@@ -48,12 +48,12 @@
                     </el-row>
                 </el-col>
                 <el-col :span="12">
-                    <el-row>
+                    <el-row ustify="center">
                         <el-col :span="24">
                             <DutytInfo></DutytInfo>
                         </el-col>
                     </el-row>
-                    <el-row>
+                    <el-row justify="center">
                         <el-col :span="24">
                             <List></List>
                         </el-col>
