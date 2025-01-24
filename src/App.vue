@@ -5,8 +5,8 @@ import TheWelcome from './components/TheWelcome.vue'
 import demo1 from './components/demo1.vue'
 import Parent from './components/Parent.vue';
 import ArrayDemo from './components/ArrayDemo.vue';
-import CarPark from './components/CarPark.vue';
-import Statistic from './components/Statistic/Statistic.vue';
+import CarPark from './pages/CarPark/CarPark.vue';
+import Statistic from './pages/Statistic/Statistic.vue';
 
 const routes = {
   // '/TheWelcome': TheWelcome,

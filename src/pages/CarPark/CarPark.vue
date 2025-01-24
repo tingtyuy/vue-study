@@ -115,7 +115,7 @@
 </template>
 
 <script setup>
-import Car from '../components/Car.vue';
+import Car from './Car.vue';
 import { ref } from 'vue';
 
 const tableData = [
@@ -227,7 +227,7 @@ init();
 </script>
 
 <style lang="scss" scoped>
-$parking-lot: '../assets/parking-lot.jpg';
+$parking-lot: '../../assets/parking-lot.jpg';
 
 
 
