@@ -1,54 +1,58 @@
 <template>
-    <el-dialog v-model="SetDutyInfoDialog" title="值班信息设置" width="700" :inline="true" :custom-class="setdutyinfo">
+    <el-dialog v-model="SetDutyInfoDialog" width="700" :inline="true" custom-class="setdutyinfo"
+        style="background: rgb(20 63 67);">
+        <template #title>
+            <span style="color: rgb(0 255 252);">值班信息设置</span>
+        </template>
         <el-form :model="infoData">
             <el-row>
                 <el-col :span="12">
                     <el-form-item label="连队值班干部：" :label-width="100">
-                        <el-input v-model="groupUser" autocomplete="off" />
+                        <el-input v-model="infoData.groupUser" autocomplete="off" />
                     </el-form-item>
                 </el-col>
                 <el-col :span="12">
                     <el-form-item label="电话：" :label-width="100">
-                        <el-input v-model="groupPhone" autocomplete="off" />
+                        <el-input v-model="infoData.groupPhone" autocomplete="off" />
                     </el-form-item>
                 </el-col>
             </el-row>
             <el-row>
                 <el-col :span="12">
                     <el-form-item label="车场值班员：" :label-width="100">
-                        <el-input v-model="parkUser" autocomplete="off" />
+                        <el-input v-model="infoData.parkUser" autocomplete="off" />
                     </el-form-item>
                 </el-col>
                 <el-col :span="12">
                     <el-form-item label="电话：" :label-width="100">
-                        <el-input v-model="parkPhone" autocomplete="off" />
+                        <el-input v-model="infoData.parkPhone" autocomplete="off" />
                     </el-form-item>
                 </el-col>
             </el-row>
             <el-row>
                 <el-col :span="12">
                     <el-form-item label="调度室值班员：" :label-width="100">
-                        <el-input v-model="scheduleUser" autocomplete="off" />
+                        <el-input v-model="infoData.scheduleUser" autocomplete="off" />
                     </el-form-item>
                 </el-col>
                 <el-col :span="12">
                     <el-form-item label="电话：" :label-width="100">
-                        <el-input v-model="schedulePhone" autocomplete="off" />
+                        <el-input v-model="infoData.schedulePhone" autocomplete="off" />
                     </el-form-item>
                 </el-col>
             </el-row>
             <el-row>
                 <el-col :span="24">
                     <el-form-item label="天气：" :label-width="100">
-                        <el-input v-model="weather" autocomplete="off" />
+                        <el-input v-model="infoData.weather" autocomplete="off" />
                     </el-form-item>
                 </el-col>
             </el-row>
         </el-form>
         <template #footer>
             <div class="dialog-footer">
-                <el-button @click="SetDutyInfoDialog = false">取消</el-button>
-                <el-button type="primary" @click="SetDutyInfoDialog = false">
+                <el-button @click="SetDutyInfoDialog = false" color="#9C9C9C">取消</el-button>
+                <el-button type="primary" @click="SetDutyInfoDialog = false" color="#1C9795">
                     确定
                 </el-button>
             </div>
@@ -114,14 +118,19 @@ const infoData = ref({
 
 }
 
-.setdutyinfo {
-    background-color: rgb(1 26 30) !important;
+::v-deep .el-dialog__title {
+    color: red !important;
+}
+
+::v-deep .el-dialog {
+    // background: rgb(1 26 30) !important;
+    color: red;
 
 }
 
-.my-custom-dialog .el-dialog__wrapper {
-    background-color: rgb(1 26 30) !important;
-}
+// .my-custom-dialog .el-dialog__wrapper {
+//     background-color: rgb(1 26 30) !important;
+// }
 
 ::v-deep .el-descriptions__body {
     background: rgb(1 26 30) !important;
@@ -139,10 +148,17 @@ const infoData = ref({
     color: rgb(199 180 127)
 }
 
-// ::v-deep .el-dialog__header {
-//     background: rgb(1 26 30) !important;
-// }
+::v-deep .el-form-item--small .el-form-item__label {
 
-// ::v-deep .el-dialog__body {
-//     background: rgb(1 26 30) !important;
-// }</style>
+    color: #fff !important;
+}
+
+::v-deep .el-input--small .el-input__wrapper {
+
+    background-color: #426264 !important;
+}
+
+::v-deep .el-input--small .el-input__inner {
+    color: #fff !important;
+}
+</style>
