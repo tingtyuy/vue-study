@@ -37,11 +37,12 @@ const tableData = [
 </script>
 <style scoped lang="scss">
 .list {
-    // border: 1.5px solid #03a0a1;
     border-color: #03a0a1;
     padding: 3.2rem;
     width: 100%;
     height: 42.8rem;
+    --el-fill-color-light: #03a0a1;
+    --el-border-color-lighter: #011a1e;
 }
 
 ::v-deep .border-box-content {
@@ -65,5 +66,4 @@ const tableData = [
 // .el-table .el-table__body-wrapper tbody,
 // .el-table .el-table__body-wrapper {
 //     border-bottom: none !important;
-// }
-</style>
+// }</style>
